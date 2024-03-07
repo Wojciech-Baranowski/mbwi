@@ -7,6 +7,8 @@
 	\usepackage{graphicx}
 	\usepackage{geometry}
 	\usepackage{listings}
+	\usepackage{float}
+
 
 	%\usepackage[hidelinks]{hyperref}
 	
@@ -27,7 +29,7 @@ Wykorzystanie obliczeń kwantowych w algorithmic trading.
 
 \subsection{Opiekun}
 
-Opiekunem projektu jest dr inż. Piotruś Mironowicz.
+Opiekunem projektu jest dr inż. Piotr Mironowicz.
 
 \subsection{Cele i krótki opis}
 
@@ -37,65 +39,65 @@ Algorithmic trading, czyli handel algorytmiczny, to strategia inwestycyjna poleg
 
 \subsection{Cele i pytania}
 
-Celem jest znalezienie klasycznych algorytmów używanych w algorythmic trading, wraz z ich definicją oraz znalezienie algorytmów kwantowych mających potencjał być wykorzytanych w analogicznym celu. Następnie odpowiedzieć na pytanie który z nich najlepiej spełnia swoją rolę, poświęcając szczególną uwagę algorytmom kwantowym. 
+Celem jest znalezienie klasycznych algorytmów używanych w algorythmic trading, wraz z ich definicją oraz znalezienie algorytmów kwantowych mających potencjał być wykorzystanych w analogicznym celu. 
+Następnie odpowiedzieć na pytanie które z nich powinny być wykorzystane w porównaniu dwóch podejść. 
 
 \subsection{Słowa kluczowe}
+Słowa kluczowe są podzielone na zbiory A, B i C.
 
-\begin{itemize}
-	\item quantum computing,
-	\item algorythmic trading,
-	\item quantum algorithm,
-	\item quantum simulation,
-	\item finance,
-	\item portfolio, 
-	\item optimization,
-	\item market predicting,
-	\item trading strategy.
-\end{itemize}
+Zbiór A1 zawiera (quantum).
+
+Zbiór A1 zawiera (algorithm OR simulation OR \_)
+
+Zbiór B zawiera (portfolio OR market predicting OR trading strategy OR finance)
+
+Zbiór C zawiera (optimization OR \_)
+
+Gdzie znak \emph{\_} oznacza pusty ciąg.
 
 \subsection{Wyszuwiwane frazy}
-
-\begin{itemize}
-	\item algorythmic trading,
-	\item quantum algorythmic trading,
-	\item trading strategy,
-	\item quantum tradng strategy,
-	\item portfolio optimization,
-	\item market predicting.
-\end{itemize}
-
+Wyszukiwane frazy będą dzielić się na 2 grupy stworzone według następujących schematów:
+\begin{enumerate}
+	\item A1 AND B AND C, czyli: \newline \texttt{"quantum"\ AND ("portfolio"\ OR "market predicting"\ OR "trading strategy"\ OR \linebreak"finance")\ AND ("optimization"\ OR "")},
+	\item A2 AND B AND C, czyli: \newline \texttt{("algorithm"\ OR "simulation"\ OR "")\ AND ("portfolio"\ OR "market predicting"\linebreak OR "trading strategy"\ OR "finance")\ AND ("optimization"\ OR "")},
+\end{enumerate} 
+gdzie schemat 1 będzie wykorzystany do wyszukiwania algorytmów kwantowych, a 2 do klasycznych. 
 
 \subsection{Bazy danych literatury}
 
 \begin{itemize}
+	\item Scopus,
 	\item IEEEXplore,
+	\item SpringerLink,
 	\item arxiv,
-	\item scihub.
+	\item Google scholar.
 \end{itemize}
 
-
 \subsection{Kryteria inkluzji}
-
 \begin{itemize}
-	\item rok publikacji: $\ge$ 2021,
-	\item język publikacji: polski, angielski,
-	\item typ publikacji: artykuł, książka, praca naukowa.
+	\item rok publikacji: 
+	\begin{itemize}
+		\item dla algorytmów kwantowych: $\ge$ 2021,
+		\item dla algorytmów klasycznych: $\ge$ 1990 and $\le$ 2010.
+	\end{itemize}
+	\item język publikacji: angielski,
+	\item typ publikacji: artykuł(ar), materiały z konferencji(cr),
+	\item dany dokument się już nie pojawił.
 \end{itemize}
 
 \subsection{Kryteria ekskluzji}
 
 \begin{itemize}
-	\item rok publikacji: $\le$ 2020,
-	\item język publikacji: inny niż polski i angielski,
-	\item typ publikacji: gazeta, magazyn, czasopismo, blog.
+	\item Brak dostępu do danego dokumentu,
+	\item Artykuł jest mocno powiązany z innym.
 \end{itemize}
 
 \subsection{Kryteria jakości}
 
 \begin{itemize}
-	\item metoda badawcza: analiza danych wtórnych, eksperymenty,
-	\item liczba cytowań: $\ge$ 4,
-	\item dane badawcze: historyczne odczyty giełdowe,
+	\item Dokument oparty na badaniach naukowych,
+	\item słowa kluczowe w artykule,
+	\item dane badawcze: historyczne odczyty giełdowe.
 \end{itemize}
 
 \subsection{Ekstrakcja danych}
@@ -111,19 +113,38 @@ Celem jest znalezienie klasycznych algorytmów używanych w algorythmic trading,
 \subsubsection{Kroki procesu}
 
 \begin{enumerate}
-	\item ustawienie odpowiednich filtrów w wyszukiwarkach,
-	\item wykonanie wielu zapytań z wykorzystaniem różnych kombinacji słów kluczowych,
-	\item filtrowanie zebranych artykułów względem kryteriów,
-	\item wyekstraktowanie i uporzadkowanie danych.
+	\item Stworzenie planu wyszukiwania oraz dobór kryteriów,
+	\item stworzenie zapytań do wyszukiwarek,
+	\item wyciągnięcie danych z wyszukiwarek,
+	\item dobór artykułów na podstawie tytułów i abstraktów,
+	\item dobór artykułów na zawartości i kryteriów ekskluzji,
+	\item sprawdzenie względem kryteriów jakości,
+	\item ostateczny dobór na podstawie jakości artykułów,
+	\item dodanie do puli artykułów zawartych w referencjach artykułów już istniejących,
+	\item wyekstraktowanie i uporządkowanie danych.
 \end{enumerate}
 
 \subsubsection{Podział ról w zespole}
 
-\begin{itemize}
-	\item osoba wyszukująca dane: Paulina,
-	\item osoba weryfikująca dane: Marek,
-	\item osoba tworząca raport: Wojciech.
-\end{itemize}
+\begin{table}[H]
+    \caption{Podział danych etapów SLR między osobami w zespole}
+    \centering
+    \begin{tabular}{|p{1.5cm}|p{5cm}|p{5cm}|}
+        \hline
+        Krok & Osoba wyznaczona do zadania & Recenzent\\
+        \hline
+        1, 2 & Wojciech i Marek  & Paulina\\
+        \hline
+        3 & Wojciech & Marek\\
+        \hline
+        4, 5, 6, 7 & Paulina, Wojciech i Marek & Paulina, Wojciech i Marek\\
+        \hline
+        8 & Paulina & Wojciech\\
+        \hline
+        9 & Paulina i Marek & Wojciech\\
+        \hline
+    \end{tabular}
+\end{table}
 
 \subsubsection{Wykorzystane narzędzia}
 
