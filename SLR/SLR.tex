@@ -47,19 +47,27 @@ Słowa kluczowe są podzielone na zbiory A, B i C.
 
 Zbiór A1 zawiera (quantum).
 
-Zbiór A2 zawiera (algorithm OR simulation OR \_)
+Zbiór A2 zawiera (algorithm OR simulation OR \_).
 
-Zbiór B zawiera (portfolio OR market predicting OR trading strategy OR finance)
+Zbiór B zawiera (portfolio OR market predicting OR trading strategy OR finance).
 
-Zbiór C zawiera (optimization OR \_)
+Zbiór C zawiera (optimization OR \_).
 
 Gdzie znak \emph{\_} oznacza pusty ciąg.
 
 \subsection{Wyszuwiwane frazy}
 Wyszukiwane frazy będą dzielić się na 2 grupy stworzone według następujących schematów:
 \begin{enumerate}
-	\item A1 AND B AND C, czyli: \newline \texttt{"quantum"\ AND ("portfolio"\ OR "market predicting"\ OR "trading strategy"\ OR \linebreak"finance")\ AND ("optimization"\ OR "")},
-	\item A2 AND B AND C, czyli: \newline \texttt{("algorithm"\ OR "simulation"\ OR "")\ AND ("portfolio"\ OR "market predicting"\linebreak OR "trading strategy"\ OR "finance")\ AND ("optimization"\ OR "")},
+	\item A1 AND B AND C, czyli: 
+	\begin{verbatim} 
+		"quantum" AND ("portfolio" OR "market predicting" OR "trading strategy"
+		OR "finance") AND ("optimization" OR "")},
+	\end{verbatim}
+	\item A2 AND B AND C, czyli:
+	\begin{verbatim}
+		("algorithm" OR "simulation" OR "") AND ("portfolio" OR "market predicting"
+		OR "trading strategy" OR "finance") AND ("optimization" OR "")},
+	\end{verbatim}
 \end{enumerate} 
 gdzie schemat 1 będzie wykorzystany do wyszukiwania algorytmów kwantowych, a 2 do klasycznych. 
 
@@ -75,37 +83,37 @@ gdzie schemat 1 będzie wykorzystany do wyszukiwania algorytmów kwantowych, a 2
 
 \subsection{Kryteria inkluzji}
 \begin{itemize}
-	\item rok publikacji: 
+	\item Rok publikacji: 
 	\begin{itemize}
 		\item dla algorytmów kwantowych: $\ge$ 2021,
-		\item dla algorytmów klasycznych: $\ge$ 1990.
+		\item dla algorytmów klasycznych: $\ge$ 1990,
 	\end{itemize}
 	\item język publikacji: angielski,
 	\item typ publikacji: artykuł(ar), materiały z konferencji(cr),
-	\item dany dokument się już nie pojawił.
+	\item jest to pierwsze wystąpienie danego dokumentu.
 \end{itemize}
 
 \subsection{Kryteria ekskluzji}
 
 \begin{itemize}
 	\item Brak dostępu do danego dokumentu,
-	\item Artykuł jest mocno powiązany z innym.
-	\item Jest opulikowany w predator jurnals.
+	\item artykuł jest mocno powiązany z innym artykułem.
+	\item artykuł jest opulikowany w predator journals.
 \end{itemize}
 
 \subsection{Kryteria jakości}
 
 \begin{itemize}
-	\item Dokument jest oparty na badaniach naukowych.
-	\item Artykuł był recenzowany i/lub znajduje się na liście filadelfijskiej.
-	\item Czasoposmo artykułu jest na liście ministerialnej i ma punkty $\ge70$.
-	\item Dane badawcze są historycznymi odczytami giełdowymi.
+	\item Dokument jest oparty na badaniach naukowych,
+	\item artykuł był recenzowany lub znajduje się na liście filadelfijskiej,
+	\item czasopismo artykułu jest na liście ministerialnej i ma co najmniej 70 punktów,
+	\item dane badawcze są historycznymi odczytami giełdowymi.
 \end{itemize}
 
 \subsection{Ekstrakcja danych}
 
 \begin{itemize}
-	\item wykorzystane algorytmy,
+	\item Wykorzystane algorytmy,
 	\item definicja algorytmów,
 	\item rezultaty na zadanych zbiorach danych.
 \end{itemize}
@@ -119,11 +127,11 @@ gdzie schemat 1 będzie wykorzystany do wyszukiwania algorytmów kwantowych, a 2
 	\item stworzenie zapytań do wyszukiwarek,
 	\item wyciągnięcie danych z wyszukiwarek,
 	\item dobór artykułów na podstawie tytułów i abstraktów,
-	\item dobór artykułów na zawartości i kryteriów ekskluzji,
-	\item sprawdzenie względem kryteriów jakości,
-	\item ostateczny dobór na podstawie jakości artykułów,
+	\item dobór artykułów na podstawie zawartości i kryteriów ekskluzji,
+	\item sprawdzenie artykułów względem kryteriów jakości,
+	\item ostateczna selekcja na podstawie jakości artykułów,
 	\item dodanie do puli artykułów zawartych w referencjach artykułów już istniejących,
-	\item wyekstraktowanie i uporządkowanie danych.
+	\item uporządkowanie danych.
 \end{enumerate}
 
 \subsubsection{Podział ról w zespole}
@@ -135,7 +143,7 @@ gdzie schemat 1 będzie wykorzystany do wyszukiwania algorytmów kwantowych, a 2
         \hline
         Krok & Osoba wyznaczona do zadania & Recenzent\\
         \hline
-        1, 2 & Wojciech i Marek  & Paulina\\
+        1, 2 & Wojciech i Marek & Paulina\\
         \hline
         3 & Wojciech & Marek\\
         \hline
@@ -151,7 +159,7 @@ gdzie schemat 1 będzie wykorzystany do wyszukiwania algorytmów kwantowych, a 2
 \subsubsection{Wykorzystane narzędzia}
 
 \begin{itemize}
-	\item wyżej wymienione bazy literatury,
+	\item Wyżej wymienione bazy literatury,
 	\item arkusz kalkulacyjny,
 	\item latex,
 	\item nvim,
