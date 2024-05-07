@@ -8,10 +8,13 @@
 	\usepackage{geometry}
 	\usepackage{listings}
 	\usepackage{float}
+ \usepackage{graphicx}
+ \usepackage{biblatex}
+\addbibresource{scopus.bib}
 
 
 	%\usepackage[hidelinks]{hyperref}
-	
+
 \title{Plan i wstępne wyniki Systematycznego Przeglądu Literatury}
 \author{inż. Paulina Brzęcka 184701 \and inż. Marek Borzyszkowski 184266 \and inż. Wojciech Baranowski 184574}
 \date{\today}
@@ -39,8 +42,8 @@ Algorithmic trading, czyli handel algorytmiczny, to strategia inwestycyjna poleg
 
 \subsection{Cele i pytania}
 
-Celem jest znalezienie klasycznych algorytmów używanych w algorythmic trading, wraz z ich definicją oraz znalezienie algorytmów kwantowych mających potencjał być wykorzystanych w analogicznym celu. 
-Następnie odpowiedzieć na pytanie które z nich powinny być wykorzystane w porównaniu dwóch podejść. 
+Celem jest znalezienie klasycznych algorytmów używanych w algorythmic trading, wraz z ich definicją oraz znalezienie algorytmów kwantowych mających potencjał być wykorzystanych w analogicznym celu.
+Następnie odpowiedzieć na pytanie które z nich powinny być wykorzystane w porównaniu dwóch podejść.
 
 \subsection{Słowa kluczowe}
 Słowa kluczowe są podzielone na zbiory A, B i C:
@@ -52,39 +55,37 @@ Słowa kluczowe są podzielone na zbiory A, B i C:
 \end{itemize}
 gdzie znak \emph{\_} oznacza pusty ciąg.
 
-\subsection{Wyszuwiwane frazy}
+\subsection{Wyszukiwane frazy}
 Wyszukiwane frazy będą dzielić się na 2 grupy stworzone według następujących schematów:
 \begin{enumerate}
-	\item A1 AND B AND C, czyli: 
-	\begin{verbatim} 
+	\item A1 AND B AND C, czyli:
+	      \begin{verbatim}
 		"quantum" AND ("portfolio" OR "market predicting" OR "trading strategy"
 		OR "finance") AND ("optimization" OR "")},
 	\end{verbatim}
 	\item A2 AND B AND C, czyli:
-	\begin{verbatim}
+	      \begin{verbatim}
 		("algorithm" OR "simulation" OR "") AND ("portfolio" OR "market predicting"
 		OR "trading strategy" OR "finance") AND ("optimization" OR "")},
 	\end{verbatim}
-\end{enumerate} 
-gdzie schemat 1 będzie wykorzystany do wyszukiwania algorytmów kwantowych, a 2 do klasycznych. 
+\end{enumerate}
+gdzie schemat 1 będzie wykorzystany do wyszukiwania algorytmów kwantowych, a 2 do klasycznych.
 
 \subsection{Bazy danych literatury}
 
 \begin{itemize}
 	\item Scopus,
 	\item IEEEXplore,
-	\item SpringerLink,
-	\item arxiv,
-	\item Google scholar.
+	\item SpringerLink.
 \end{itemize}
 
 \subsection{Kryteria inkluzji}
 \begin{itemize}
-	\item Rok publikacji: 
-	\begin{itemize}
-		\item dla algorytmów kwantowych: $\ge$ 2021,
-		\item dla algorytmów klasycznych: $\ge$ 1990,
-	\end{itemize}
+	\item Rok publikacji:
+	      \begin{itemize}
+		      \item dla algorytmów kwantowych: $\ge$ 2021,
+		      \item dla algorytmów klasycznych: $\ge$ 1990,
+	      \end{itemize}
 	\item język publikacji: angielski,
 	\item typ publikacji: artykuł(ar), materiały z konferencji(cr),
 	\item jest to pierwsze wystąpienie danego dokumentu.
@@ -94,16 +95,15 @@ gdzie schemat 1 będzie wykorzystany do wyszukiwania algorytmów kwantowych, a 2
 
 \begin{itemize}
 	\item Brak dostępu do danego dokumentu,
-	\item artykuł jest mocno powiązany z innym artykułem.
+	\item artykuł jest mocno powiązany z innym artykułem,
+	\item czasopismo artykułu jest na liście ministerialnej i ma mniej niż 70 punktów,
 	\item artykuł jest opulikowany w predatory journals.
 \end{itemize}
 
 \subsection{Kryteria jakości}
 
 \begin{itemize}
-	\item Dokument jest oparty na badaniach naukowych,
-	\item artykuł był recenzowany lub znajduje się na liście filadelfijskiej,
-	\item czasopismo artykułu jest na liście ministerialnej i ma co najmniej 70 punktów,
+	\item Artykuł był recenzowany lub znajduje się na liście filadelfijskiej,
 	\item dane badawcze są historycznymi odczytami giełdowymi.
 \end{itemize}
 
@@ -135,23 +135,23 @@ gdzie schemat 1 będzie wykorzystany do wyszukiwania algorytmów kwantowych, a 2
 \subsubsection{Podział ról w zespole}
 
 \begin{table}[H]
-    \caption{Podział danych etapów SLR między osobami w zespole}
-    \centering
-    \begin{tabular}{|p{1.7cm}|p{5cm}|p{5cm}|}
-        \hline
-        Krok & Osoba wyznaczona do zadania & Recenzent\\
-        \hline
-        1, 2 & Wojciech i Marek & Paulina\\
-        \hline
-        3 & Wojciech & Marek\\
-        \hline
-        4, 5, 6, 7, 8 & Paulina, Wojciech i Marek & Paulina, Wojciech i Marek\\
-        \hline
-        9 & Paulina & Wojciech\\
-        \hline
-        10 & Paulina i Marek & Wojciech\\
-        \hline
-    \end{tabular}
+	\caption{Podział danych etapów SLR między osobami w zespole}
+	\centering
+	\begin{tabular}{|p{1.7cm}|p{5cm}|p{5cm}|}
+		\hline
+		Krok          & Osoba wyznaczona do zadania & Recenzent                 \\
+		\hline
+		1, 2          & Wojciech i Marek            & Paulina                   \\
+		\hline
+		3             & Wojciech                    & Marek                     \\
+		\hline
+		4, 5, 6, 7, 8 & Paulina, Wojciech i Marek   & Paulina, Wojciech i Marek \\
+		\hline
+		9             & Paulina                     & Wojciech                  \\
+		\hline
+		10            & Paulina i Marek             & Wojciech                  \\
+		\hline
+	\end{tabular}
 \end{table}
 
 \subsubsection{Wykorzystane narzędzia}
@@ -166,22 +166,130 @@ gdzie schemat 1 będzie wykorzystany do wyszukiwania algorytmów kwantowych, a 2
 
 \section{Wyniki Systematycznego Przeglądu Literatury}
 
+Z powodu tematyki proces SLR podzielono na 2 procesy. Jeden dotyczący algorytmów klasycznych, drugi kwantowych.
+
 \subsection{Wyniki liczbowe}
 
-\subsection{Atrykuły wybrane do ekstrakcji danych}
+\begin{table}[H]
+	\caption{Liczba wybranych publikacji w każdym z etapów SLR}
+	\centering
+	\begin{tabular}{|p{2cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+		\hline
+		Baza danych  & Liczba znalezionych pozycji & Liczba po usunięciu duplikatów & Liczba po usunięciu zgodnie z kryteriami eksluzji & Liczba po zastosowaniu kryteriów jakości i przejrzeniu artykułów \\
+		\hline
+		Scopus       & 468                         & 384                            & 125                                               & 30                                                               \\
+		\hline
+		IEEEXplore   & 83                          & 7                              & 0                                                 & 0                                                                \\
+		\hline
+		SpringerLink & 173                         & 44                             & 19                                                & 5                                                                \\
+		\hline
+	\end{tabular}
+\end{table}
+
+Warto dodać, że 11 z ostatecznie wybranych artykułów dotyczy algorytmów kwantowych, a 24 dotyczą algorytmów klasycznych.
+
+\subsection{Artykuły wybrane do ekstrakcji danych}
+
+\begin{table}[H]
+	\caption{Lista wybranych artykułów dot. algorytmów klasycznych znalezionych w procesie SLR zgodnie z kryteriami inkluzji, ekskluzji i jakości}
+	\centering
+	\begin{tabular}{|p{2cm}|p{6cm}|p{3cm}|p{2cm}|}
+		\hline
+		Źródło & Tytuł                                                                                                                                               & Autorzy                           & Rok publikacji \\
+		\hline
+		scopus & The mean-variance cardinality constrained portfolio optimization problem: An experimental evaluation of five multiobjective evolutionary algorithms & Anagnostopoulos K.P.; Mamanis G.  & 2011           \\
+		\hline
+		scopus & Population-based algorithm portfolios for numerical optimization                                                                                    & Peng F.; Tang K.; Chen G.; Yao X. & 2010           \\
+		\hline
+		scopus & Using genetic algorithm to support portfolio optimization for index fund management                                                                 & Oh K.J.; Kim T.Y.; Min S.         & 2005           \\
+		\hline
+		scopus & A learning-guided multi-objective evolutionary algorithm for constrained portfolio optimization                                                     & Lwin K.; Qu R.; Kendall G.        & 2014           \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\caption{Lista wybranych artykułów dot. algorytmów kwantowych znalezionych w procesie SLR zgodnie z kryteriami inkluzji, ekskluzji i jakości}
+	\centering
+	\begin{tabular}{|p{2cm}|p{6cm}|p{3cm}|p{2cm}|}
+		\hline
+		Źródło       & Tytuł                                                                                                & Autorzy                                                       & Rok publikacji \\
+		\hline
+		scopus       & Hybrid quantum-classical optimization with cardinality constraints and applications to finance       & Fernández-Lorenzo S.; Porras D.; García-Ripoll J.J.           & 2021           \\
+		\hline
+		scopus       & Best practices for portfolio optimization by quantum computing, experimented on real quantum devices & Buonaiuto G.; Gargiulo F.; De Pietro G.; Esposito M.; Pota M. & 2023           \\
+		\hline
+		scopus       & A quantum online portfolio optimization algorithm                                                    & Lim D.; Rebentrost P.                                         & 2024           \\
+		\hline
+		springerlink & Recent progress and perspectives on quantum computing for finance                                    & Yehui TangJunchi YanGuoqiang HuBaohua ZhangJinzan Zhou        & 2022           \\
+		\hline
+	\end{tabular}
+\end{table}
 
 \subsection{Artykuły wybrane przy użyciu techniki snowballingu}
 
+\begin{table}[H]
+	\caption{Lista artykułów wybranych za pomocą techniki snowballingu}
+	\centering
+	\begin{tabular}{|p{2cm}|p{6cm}|p{3cm}|p{2cm}|}
+		\hline
+		Źródło & Tytuł                                                                              & Autorzy                                                & Rok publikacji \\
+		\hline
+		scopus & A fast and elitist multiobjective genetic algorithm: NSGA-II                       & Deb, K., Pratap, A., Agarwal, S., Meyarivan, T..       & 2002           \\
+		\hline
+		scopus & Heuristics for cardinality constrained portfolio optimisation                      & Chang, T.-J., Meade, N., Beasley, J.E., Sharaiha, Y.M. & 2000           \\
+		\hline
+		scopus & Portfolio optimization problems in different risk measures using genetic algorithm & Chang, T.-J., Yang, S.-C., Chang, K.-J.                & 2009           \\
+		\hline
+		scopus & Particle swarm optimization approach to portfolio optimization                     & Cura, T.                                               & 2009           \\
+		\hline
+	\end{tabular}
+\end{table}
+
 \subsection{Statystyki artykułów}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\linewidth ]{wykres.png}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\linewidth ]{wykres2.png}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\linewidth ]{wykres3.png}
+\end{figure}
+
 \subsection{Wstępnie wybrane dane}
+
+Na podstawie wybranych artykułów znaleziono listę algorytmów klasycznych oraz kwantowych mogących miec zastosowanie w algorithmic trading. Są to między innymi:
+\begin{itemize}
+	\item Algorytmy genetyczne oraz ewolucyjne,
+	\item algorytm hybrydowego przeszukiwania lokalnego (hybrid local search algorithm),
+	\item algorytm świetlika (Firefly algorithm),
+	\item algorytmy heurystyczne,
+	\item algorytm roju pszczół (artificial bee colony algorithm),
+	\item algorytm wyszukiwania sąsiedztwa ze zmiennymi równoległymi,
+	\item Quantum beetle antennae search
+	\item kwantowy algorytm optymalizacji portfela online,
+	\item NSGA-II - niedominujacy algorytm sortowania genetycznego.
+\end{itemize}
+
 
 \section{Wnioski}
 
 \subsection{Proces SLR}
 
+Proces systematycznego przeglądu literatury pozwala w sposób uporzadkowany przeanalizować i dokonać selekcji spośród wielu publikacji naukowych. Bardzo pomocne sa w tym wyszukiwarki publikacji naukowych, natomiast trzeba brać pod uwagę to, że rezultaty wyszukiwań z baz danych moga się pokrywać, co wymaga dodatkowego sprawdzenia braku duplikatów i ich usunięcia. Dodatkowo, lista wyszukanych pozycji może być ogromna, dlatego trzeba położyć nacisk na to, w jaki sposób są formułować problem, aby jak najbardziej zawęzić obszar wyszukiwań z otrzymaniem zamierzonego efektu.
+
 \subsection{Wyniki SLR}
 
-\section{Literatura}
+Na podstawie przeprowadzonego procesu SLR z 724 wyszukanych publikacji naukowych wyselekcjonowano 39 artykułów, które będą pomocne podczas realizacji projektu. Analizując wyniki otrzymane przez proces SLR można zauważyć, że informatyka kwantowa jest stosunkowo młoda dziedziną informatyki, z uwagi na to, że początki publikacji naukowych dotyczących tej dzidziny przypadają na rok 2020.
+
+\nocite{*}
+\printbibliography
 
 \end{document}
