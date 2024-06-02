@@ -1,0 +1,160 @@
+\documentclass[polish,envcountsect,10pt]{article}
+
+   	\usepackage[T1]{fontenc}
+   	\usepackage{polski}
+    \usepackage{babel}
+	\usepackage{subfigure}
+	\usepackage{graphicx}
+	\usepackage{geometry}
+	\usepackage{listings}
+	\usepackage{float}
+    \usepackage{biblatex}
+    \addbibresource{bibl.bib}
+
+
+	%\usepackage[hidelinks]{hyperref}
+	
+\title{Projekt badań oraz studium pilotażowe}
+\author{inż. Paulina Brzęcka 184701 \and inż. Marek Borzyszkowski 184266 \and inż. Wojciech Baranowski 184574}
+\date{\today}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Projekt badawczy}
+
+\subsection{Tytuł}
+
+Wykorzystanie obliczeń kwantowych w algorithmic trading.
+
+\subsection{Opiekun}
+
+Opiekunem projektu jest dr inż. Piotr Mironowicz.
+
+\subsection{Cele i krótki opis}
+
+Algorithmic trading, czyli handel algorytmiczny, to strategia inwestycyjna polegająca na wykorzystaniu zautomatyzowanych systemów handlowych do podejmowania decyzji inwestycyjnych na rynkach finansowych. Obliczenia kwantowe mają potencjał wzmocnienia tych strategii poprzez szybsze i bardziej efektywne przetwarzanie danych rynkowych oraz analizę trendów. W ramach tego tematu zostanie zbadana możliwość zaimplementowania agenta podejmującego decyzje inwestycyjne podczas gry na giełdzie, wykorzystując obliczenia kwantowe. Agent będzie testowany na emulatorze komputera kwantowego lub rzeczywistym komputerze, a jego skuteczność będzie porównywana z wybranymi algorytmami niekorzystającymi z technologii kwantowych. Efektem projektu będzie szkic artykułu naukowego opisującego przeprowadzone badania i wnioski z nich płynące.
+
+\section{Recenzja artykułu badawczego}
+
+\subsection{Tytuł}
+
+Tytuł artykułu brzmi: ''Portfolio Optimization Based on Funds Standardization and Genetic Algorithm''.
+
+\subsection{Autorzy}
+
+Autorami artykułu są: Yao-Hsin Chou, Shu-Yu Kuo oraz Yi-Tzu Lo.
+
+\subsection{Odnośnik}
+
+IEEE Access, wolumen 5 (strony 21885 - 21900), nr artykułu 8049455, 23 września 2017.
+
+\subsection{Spis treści}
+
+
+\subsection{Pozycjonowanie każdego elementu projektowania i realizacji badań}
+
+
+\subsection{Mocne strony}
+
+\subsubsection{Nowa metodologia}
+
+\begin{itemize}
+	\item \textbf{Standaryzacja funduszy:}
+    wprowadzenie standaryzacji funduszy jako nowej metody reprezentowania zwrotu portfela i obliczania ryzyka portfela jest znaczącą zaletą. Metoda ta ma na celu rozwiązanie niedoskonałości tradycyjnych obliczeń ryzyka.
+	\item \textbf{Kompleksowa ocena ryzyka:}
+    artykuł twierdzi, że standaryzacja funduszy może dokładnie ocenić ryzyko portfela, uwzględniając interakcje między wszystkimi akcjami, co jest bardziej kompleksowe niż tradycyjne relacje między parami akcji.
+\end{itemize}
+
+\subsubsection{Efektywność i redukcja złożoności}
+
+\begin{itemize}
+	\item \textbf{Zmniejszona złożoność obliczeń:}
+    kluczową zaletą jest zmniejszenie złożoności obliczeń. Artykuł podkreśla, że złożoność proponowanej metody nie rośnie wraz z liczbą akcji, co jest znaczną poprawą w stosunku do tradycyjnych metod.
+	\item \textbf{Integracja algorytmu genetycznego:}
+    połączenie algorytmu genetycznego z współczynnikiem Sharpe’a i standaryzacją funduszy w celu znalezienia optymalnego portfela jest innowacyjnym podejściem, które wykorzystuje zalety algorytmów ewolucyjnych w problemach optymalizacyjnych.
+\end{itemize}
+
+\subsubsection{Praktyczne rozwiązania}
+
+\begin{itemize}
+	\item \textbf{Technika sliding window:}
+    zastosowanie techniki sliding window w celu uniknięcia problemu nadmiernego dopasowania jest praktycznym rozwiązaniem powszechnego problemu w optymalizacji portfela, co zwiększa solidność metody.
+	\item \textbf{Efektywne rozproszenie ryzyka:}
+    wyniki eksperymentalne pokazują, że proponowana metoda może skutecznie rozproszyć ryzyko i zapewnić niższe ryzyko oraz stabilne zwroty w porównaniu do tradycyjnych metod.
+\end{itemize}
+
+\subsubsection{Walidacja eksperymentalna}
+
+\begin{itemize}
+	\item \textbf{Rozległe testowanie:}
+    artykuł wspomina o testowaniu różnych okresów szkoleniowych i testowych, co sugeruje dokładną walidację proponowanej metody. Takie kompleksowe testowanie może zwiększyć wiarygodność wyników.
+\end{itemize}
+
+\subsection{Słabe strony}
+
+\subsubsection{Złożoność artykułu}
+
+\begin{itemize}
+	\item \textbf{Techniczny żargon:}
+    artykuł zawiera kilka terminów technicznych i pojęć (np. standaryzacja funduszy, algorytm genetyczny, sliding window), które mogą być trudne do zrozumienia dla czytelników bez tła w optymalizacji finansowej lub metodach obliczeniowych.
+	\item \textbf{Ograniczone wyjaśnienia:}
+    chociaż artykuł wprowadza standaryzację funduszy, nie dostarcza szczegółowego wyjaśnienia, jak to działa, co może utrudniać czytelnikom zrozumienie jej implementacji i zalet.
+\end{itemize}
+
+\subsubsection{Zakres i zastosowanie}
+
+\begin{itemize}
+	\item \textbf{Generalizacja wyników:}
+    artykuł nie określa warunków rynkowych ani klas aktywów testowanych, co może ograniczać postrzeganą uniwersalność wyników. Czytelnicy mogą się zastanawiać, czy metoda jest równie skuteczna w różnych rynkach i warunkach ekonomicznych.
+	\item \textbf{Przesadne poleganie na wynikach eksperymentalnych:}
+    chociaż wyniki eksperymentalne są obiecujące, artykuł nie wspomina o teoretycznej walidacji ani porównaniu z szerszym zakresem tradycyjnych metod poza tym, co jest konieczne.
+\end{itemize}
+
+\subsubsection{Ocena i Benchmarking}
+
+\begin{itemize}
+	\item \textbf{Brak szczegółowej analizy porównawczej:}
+	chociaż metoda jest porównywana z tradycyjnymi metodami, artykuł nie określa, które tradycyjne metody były używane do porównania, ani nie dostarcza szczegółów dotyczących użytych metryk wydajności lub benchmarków.
+	\item \textbf{Rozważania ryzyka:}
+	artykuł wspomina o niższym ryzyku i stabilnym zwrocie, ale nie dostarcza szczegółowych informacji na temat tego, jak te metryki są ilościowo oceniane lub porównywane z istniejącymi benchmarkami.
+\end{itemize}
+
+\subsubsection{Kierunki przyszłych badań}
+
+\begin{itemize}
+	\item \textbf{Brak wzmianki o przyszłych badaniach:}
+	brak wzmianki o kierunkach przyszłych badań lub potencjalnych ulepszeniach może wskazywać na brak przyszłościowego myślenia lub świadomości ograniczeń proponowanej metody.
+\end{itemize}
+
+\subsection{Ocena}
+
+Oceniając artykuł, można zauważyć, że proponowana metoda standaryzacji funduszy wraz z algorytmem genetycznym wydaje się być obiecującym podejściem do optymalizacji portfela inwestycyjnego. Artykuł przedstawia nowatorskie podejście do oceny ryzyka portfela, które może przyczynić się do zmniejszenia złożoności obliczeń i poprawy efektywności inwestycji. Jednakże istnieją pewne niedociągnięcia, takie jak brak szczegółowej analizy porównawczej z tradycyjnymi metodami oraz ograniczona ekspozycja na kierunki przyszłych badań. Pomimo tego artykuł stanowi cenny wkład w dziedzinę optymalizacji portfela, zwracając uwagę na potrzebę dalszych badań i eksperymentów w celu weryfikacji skuteczności proponowanej metody w różnych warunkach rynkowych i klasach aktywów.
+
+\section{Wnioski}
+
+\subsection{Wnioski końcowe z kursu}
+
+\subsubsection{Plan i wstępne wyniki systematycznego przeglądu literatury}
+
+Dzięki kursowi zrozumieliśmy metodologię systematycznego przeglądu literatury, nauczyliśmy się krytycznie analizować dostępne badania oraz tworzyć szczegółowy plan badawczy. Potrafimy interpretować wstępne wyniki przeglądu, co ułatwia dalsze kierowanie badaniami.
+
+\subsubsection{Projekt badawczy i badanie pilotażowe}
+
+Kurs nauczył nas projektowania skutecznych badań, podkreślił znaczenie badań pilotażowych oraz zarządzania procesem badawczym. Zdobyliśmy umiejętności analizy danych z badań pilotażowych i ich wykorzystania do udoskonalenia głównego badania.
+
+\subsubsection{Recenzja artykułu badawczego}
+
+Kurs pomógł nam w organizacji artykułu naukowego, pisaniu klarownych tekstów oraz krytycznej ocenie prac naukowych. Poznaliśmy standardy publikacyjne i procedury recenzowania, co zwiększa nasze szanse na akceptację artykułu do druku.
+
+\section{Literatura}
+
+\begin{itemize}
+	\item Materiały wykładowe
+	\item Yao-Hsin Chou, Shu-Yu Kuo i Yi-Tzu Lo. ''Portfolio Optimization Based on Funds Standarization and Genetic Algorithm". DOI: 10.1109/ACCESS.2017.2756842.
+\end{itemize}
+
+\end{document}
+
