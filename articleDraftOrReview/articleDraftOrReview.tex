@@ -8,12 +8,13 @@
 	\usepackage{geometry}
 	\usepackage{listings}
 	\usepackage{float}
+    \usepackage{enumerate}
     \usepackage{biblatex}
     \addbibresource{bibl.bib}
 
 
 	%\usepackage[hidelinks]{hyperref}
-	
+
 \title{Projekt badań oraz studium pilotażowe}
 \author{inż. Paulina Brzęcka 184701 \and inż. Marek Borzyszkowski 184266 \and inż. Wojciech Baranowski 184574}
 \date{\today}
@@ -53,9 +54,327 @@ IEEE Access, wolumen 5 (strony 21885 - 21900), nr artykułu 8049455, 23 wrześni
 
 \subsection{Spis treści}
 
+\begin{enumerate}[I.]
+    \item  Introduction
+    \item  Related studies
+    \item  Background
+        \begin{enumerate}[A.]
+          \item Portfolio
+          \item Modern portfolio theory
+          \item Sharpe ratio
+        \end{enumerate}
+    \item  Basic concept
+    \item  Proposed methodology
+        \begin{enumerate}[A.]
+          \item Funds standardization
+          \item Portfolio optimization using GA
+            \begin{enumerate}[1)]
+              \item Representation
+              \item Initialization
+              \item Fitness calculation
+              \item Selection
+              \item Crossover
+              \item Mutation
+            \end{enumerate}
+          \item Sliding windows
+        \end{enumerate}
+    \item  Experiment
+        \begin{enumerate}[A.]
+          \item Investment targets
+          \item Experimental environment
+          \item Parameters of GA
+          \item Comparison with MPT
+          \item Self-analysis
+            \begin{enumerate}[1)]
+              \item Training period analysis
+              \item Testing period analysis
+            \end{enumerate}
+        \end{enumerate}
+    \item  Conclusion
+\end{enumerate}
 
 \subsection{Pozycjonowanie każdego elementu projektowania i realizacji badań}
 
+\begin{enumerate}[I.]
+    \item  Introduction
+    \\
+    \\
+    Wstęp dostarcza kontekstu dla problemu wyboru akcji i metod jego rozwiązania. Dla projektu przydatne może być zrozumienie podstawowych wyzwań w wyborze akcji i stosowania wskaźników takich jak Sharpe ratio.
+    \\
+    \\
+    Zawiera:
+        \begin{itemize}
+          \item Motywację do wyboru inwestycji w akcje nad innymi opcjami inwestycyjnymi.
+          \item Główne wyzwanie wyboru akcji: zrównoważenie wysokiego zwrotu i niskiego ryzyka.
+          \item Wprowadzenie wskaźnika Sharpe’a jako miary wydajności akcji.
+          \item Złożoność i ograniczenia nowoczesnej teorii portfelowej (MPT).
+        \end{itemize}
+    Braki:
+        \begin{itemize}
+          \item Konkretne przykłady lub studia przypadków ilustrujące początkowe wyzwania w wyborze akcji.
+          \item Bardziej szczegółowe wyjaśnienie, dlaczego istniejące metody nie redukują złożoności obliczeniowej.
+        \end{itemize}
+    Dodatkowe informacje:
+        \begin{itemize}
+          \item Podkreślenie, dlaczego nowa metoda (standaryzacja funduszy) jest konieczna.
+          \item Krótkie wprowadzenie do wykorzystania algorytmów genetycznych (GA) w optymalizacji portfeli.
+        \end{itemize}
+    \item  Related studies
+    \\
+    \\
+    Ta sekcja jest istotna dla porównania tradycyjnych metod CI z potencjalnym zastosowaniem obliczeń kwantowych. Może dostarczyć informacji o mocnych i słabych stronach technik CI, które mogą być porównane z technologią kwantową.
+    \\
+    \\
+    Zawiera:
+        \begin{itemize}
+          \item Przegląd istniejących badań nad wyborem akcji z wykorzystaniem technik inteligencji obliczeniowej (CI).
+          \item Wzmianka o różnych technikach CI, takich jak obliczenia ewolucyjne, teoria rozmyta i sieci neuronowe.
+        \end{itemize}
+    Braki:
+        \begin{itemize}
+          \item Szczegółowe porównania między różnymi technikami CI i ich skutecznością.
+          \item Konkretne badania lub dane wspierające wybór GA nad innymi technikami CI.
+        \end{itemize}
+    Dodatkowe informacje:
+        \begin{itemize}
+          \item Potencjalne korzyści z integracji standaryzacji funduszy z technikami CI, zwłaszcza GA, w celu poprawy optymalizacji portfela.
+        \end{itemize}
+    \item  Background
+    \\
+    \\
+    Informacje na temat dywersyfikacji i zarządzania portfelem są kluczowe dla zrozumienia, jak można zoptymalizować portfel inwestycyjny. Te zasady będą również obowiązywać w kontekście obliczeń kwantowych.
+        \begin{enumerate}[A.]
+          \item Portfolio
+            \\
+            \\
+            Zawiera:
+                \begin{itemize}
+                  \item Wyjaśnienie znaczenia wyboru akcji.
+                  \item Korzyści z dywersyfikacji inwestycji w portfelu w celu redukcji ryzyka.
+                \end{itemize}
+            Braki:
+                \begin{itemize}
+                  \item Dane historyczne wspierające strategię dywersyfikacji.
+                  \item Porównawcza analiza różnych strategii dywersyfikacji portfela.
+                \end{itemize}
+          \item Modern portfolio theory
+            \\
+            \\
+            Zrozumienie MPT jest podstawowe dla porównania tradycyjnych metod z nowymi podejściami, takimi jak obliczenia kwantowe. Projekt może wykorzystać te teoretyczne podstawy do stworzenia bardziej zaawansowanych modeli przy użyciu obliczeń kwantowych.
+            \\
+            \\
+            Zawiera:
+                \begin{itemize}
+                  \item Podstawowe zasady MPT, w tym awersję do ryzyka i równowagę między ryzykiem a zwrotem.
+                  \item Formuły matematyczne dotyczące oczekiwanego zwrotu i ryzyka portfela.
+                \end{itemize}
+            Braki:
+                \begin{itemize}
+                  \item Ograniczenia MPT w rzeczywistych scenariuszach.
+                  \item Praktyczne przykłady ilustrujące zastosowanie MPT.
+                \end{itemize}
+          \item Sharpe ratio
+            \\
+            \\
+            Wskaźnik Sharpe’a może być używany do oceny skuteczności agenta kwantowego w porównaniu z tradycyjnymi algorytmami. Jest to przydatny wskaźnik do analizy wyników inwestycyjnych.
+            \\
+            \\
+            Zawiera:
+                \begin{itemize}
+                  \item Definicję i znaczenie wskaźnika Sharpe’a.
+                  \item Formułę i wyjaśnienie, jak mierzy on wydajność inwestycji.
+                \end{itemize}
+            Braki:
+                \begin{itemize}
+                  \item Przykłady z rzeczywistego świata dotyczące wykorzystania wskaźnika Sharpe’a w zarządzaniu portfelem.
+                  \item Ograniczenia wskaźnika Sharpe’a.
+                \end{itemize}
+            Dodatkowe informacje:
+                \begin{itemize}
+                  \item Jak proponowana metoda zamierza wykorzystać wskaźnik Sharpe’a do lepszej optymalizacji portfela.
+                \end{itemize}
+        \end{enumerate}
+    \item  Basic concept
+        \\
+        \\
+        Podstawowe koncepcje dotyczące standaryzacji funduszy i optymalizacji portfela mogą być użyte jako punkt wyjścia do implementacji algorytmu kwantowego. Zrozumienie tych idei pomoże w adaptacji metod do nowego kontekstu technologii kwantowej.
+        \\
+        \\
+        Zawiera:
+            \begin{itemize}
+              \item Kluczowe pomysły stojące za proponowaną metodologią, w tym standaryzację funduszy.
+              \item Wprowadzenie kluczowych koncepcji bez szczegółowej implementacji.
+            \end{itemize}
+        Braki:
+            \begin{itemize}
+              \item Szczegółowe kroki implementacji.
+              \item Teoretyczne tło wspierające podstawowe koncepcje.
+            \end{itemize}
+        Dodatkowe informacje:
+            \begin{itemize}
+              \item Uzasadnienie wyboru standaryzacji funduszy jako nowatorskiego podejścia.
+            \end{itemize}
+    \item  Proposed methodology
+        \begin{enumerate}[A.]
+          \item Funds standardization
+                \\
+                \\
+                Proces standaryzacji funduszy może być przełożony na algorytmy kwantowe, gdzie kwantowa wersja standaryzacji może oferować przewagę w szybkości i efektywności.
+                \\
+                \\
+                Zawiera:
+                    \begin{itemize}
+                      \item Formuły matematyczne i kroki dotyczące standaryzacji funduszy.
+                      \item Wyjaśnienie, jak fundusze są alokowane i standaryzowane.
+                    \end{itemize}
+                Braki:
+                    \begin{itemize}
+                      \item Praktyczne przykłady lub studia przypadków demonstrujące standaryzację funduszy.
+                      \item Ograniczenia lub wyzwania w implementacji standaryzacji funduszy.
+                    \end{itemize}
+          \item Portfolio optimization using GA
+             \\
+                \\
+                Każdy z tych kroków może być adaptowany do kwantowych algorytmów genetycznych, które mogą wykorzystywać superpozycję i splątanie do przeszukiwania przestrzeni rozwiązań bardziej efektywnie.
+                \\
+                \\
+                Zawiera:
+            \begin{enumerate}[1)]
+              \item \textbf{Representation:} Jak portfel jest reprezentowany w GA.
+              \item \textbf{Initialization:} Metody inicjalizacji populacji GA.
+              \item \textbf{Fitness calculation:} Jak obliczana jest przystosowanie każdego portfela.
+              \item \textbf{Selection:} Proces selekcji do rozmnażania następnego pokolenia.
+              \item \textbf{Crossover:} Techniki krzyżowania stosowane w GA.
+              \item \textbf{Mutation:} Strategie mutacji wprowadzające zmienność.
+            \end{enumerate}
+            Braki:
+            \begin{itemize}
+              \item Szczegółowe algorytmy lub pseudokod dla każdego kroku.
+              \item Metryki wydajności lub benchmarki dla każdego komponentu GA.
+            \end{itemize}
+          \item Sliding windows
+            \\
+            \\
+            Technika przesuwanych okien może być zastosowana również w algorytmach kwantowych, zapewniając bardziej dynamiczne i adaptacyjne podejście do optymalizacji portfela.
+            \\
+            \\
+            Zawiera:
+                \begin{itemize}
+                  \item Wyjaśnienie techniki przesuwanych okien, aby uniknąć nadmiernego dopasowania.
+                  \item Zastosowanie przesuwanych okien w okresach testowych.
+                \end{itemize}
+            Braki:
+                \begin{itemize}
+                  \item Konkretne dane lub przykłady pokazujące skuteczność przesuwanych okien.
+                \end{itemize}
+            Dodatkowe informacje:
+                \begin{itemize}
+                  \item Potencjalne usprawnienia lub przyszłe prace nad udoskonaleniem techniki przesuwanych okien.
+                \end{itemize}
+        \end{enumerate}
+    \item  Experiment
+        \begin{enumerate}[A.]
+          \item Investment targets
+            \\
+            \\
+            Definicja celów inwestycyjnych jest istotna dla ustalenia benchmarków do porównania wydajności agenta kwantowego z tradycyjnymi metodami.
+            \\
+            \\
+            Zawiera:
+                \begin{itemize}
+                  \item Opis celów inwestycyjnych użytych w eksperymentach.
+                \end{itemize}
+            Braki:
+                \begin{itemize}
+                  \item Szczegółowe kryteria wyboru tych celów.
+                  \item Dane historyczne dotyczące wybranych celów.
+                \end{itemize}
+          \item Experimental environment
+            \\
+            \\
+            Zrozumienie środowiska eksperymentalnego pomoże w przygotowaniu odpowiedniego emulatora komputera kwantowego lub wykorzystaniu rzeczywistego komputera kwantowego do testowania agenta.
+            \\
+            \\
+            Zawiera:
+                \begin{itemize}
+                  \item Opis sprzętu i oprogramowania użytego do eksperymentów.
+                \end{itemize}
+            Braki:
+                \begin{itemize}
+                  \item Konkretne konfiguracje lub ustawienia mogące wpływać na wyniki eksperymentalne.
+                \end{itemize}
+          \item Parameters of GA
+            \\
+            \\
+            Parametry te mogą być porównane z parametrami używanymi w algorytmach kwantowych, aby zobaczyć, jakie ustawienia są najbardziej efektywne w kontekście obliczeń kwantowych.
+            \\
+            \\
+            Zawiera:
+                \begin{itemize}
+                  \item Parametry użyte w GA, takie jak rozmiar populacji, stopa mutacji itp.
+                \end{itemize}
+            Braki:
+                \begin{itemize}
+                  \item Uzasadnienie wyboru konkretnych wartości parametrów.
+                  \item Analiza wrażliwości różnych ustawień parametrów.
+                \end{itemize}
+          \item Comparison with MPT
+            \\
+            \\
+            Wyniki tej sekcji mogą dostarczyć punktu odniesienia do porównania wydajności agenta kwantowego z tradycyjnymi metodami optymalizacji portfela, takimi jak MPT.
+            \\
+            \\
+            Zawiera:
+                \begin{itemize}
+                  \item Analiza porównawcza proponowanej metody z MPT.
+                \end{itemize}
+            Braki:
+                \begin{itemize}
+                  \item Szczegółowe wyniki statystyczne wspierające porównanie.
+                  \item Ograniczenia obu metod w różnych warunkach rynkowych.
+                \end{itemize}
+          \item Self-analysis
+          \\
+          \\
+          Analiza okresów treningowych i testowych jest kluczowa do oceny skuteczności agenta kwantowego w różnych warunkach rynkowych.
+          \\
+          \\
+          Zawiera:
+            \begin{enumerate}[1)]
+              \item \textbf{Training period analysis:} Analiza wydajności podczas okresu treningowego.
+              \item \textbf{Testing period analysis:} Analiza wydajności podczas okresu testowego.
+            \end{enumerate}
+          Braki:
+            \begin{itemize}
+              \item Dane dotyczące długoterminowej wydajności.
+              \item Porównanie z innymi metodami optymalizacji portfela poza MPT.
+            \end{itemize}
+        Dodatkowe informacje:
+            \begin{itemize}
+              \item Wgląd w to, jak okresy treningowe i testowe wpływają na wydajność portfela.
+            \end{itemize}
+        \end{enumerate}
+    \item  Conclusion
+            \\
+            \\
+            Wnioski mogą dostarczyć cennych informacji na temat potencjalnych korzyści i ograniczeń zastosowania algorytmów genetycznych, co jest istotne przy porównywaniu z technologią kwantową. Dodatkowo, wnioski mogą wskazać kierunki przyszłych badań, które mogą być adaptowane do kontekstu obliczeń kwantowych.
+            \\
+            \\
+            Zawiera:
+                \begin{itemize}
+                  \item Podsumowanie wyników i skuteczności proponowanej metody.
+                  \item Zalety standaryzacji funduszy i GA w optymalizacji portfela.
+                \end{itemize}
+            Braki:
+                \begin{itemize}
+                  \item Szczegółowa dyskusja na temat przyszłych kierunków badań.
+                  \item Potencjalne ograniczenia lub wady proponowanej metody.
+                \end{itemize}
+            Dodatkowe informacje:
+                \begin{itemize}
+                  \item Rekomendacje dla praktyków dotyczące stosowania proponowanej metody w rzeczywistych scenariuszach.
+                \end{itemize}
+\end{enumerate}
 
 \subsection{Mocne strony}
 
@@ -157,4 +476,3 @@ Kurs pomógł nam w organizacji artykułu naukowego, pisaniu klarownych tekstów
 \end{itemize}
 
 \end{document}
-
